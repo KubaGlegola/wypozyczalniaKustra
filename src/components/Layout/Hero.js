@@ -6,16 +6,21 @@ import Button from "../UI/Button";
 const Hero = () => {
   return (
     <div className={classes.hero}>
-      <Card>
+      <Card className={classes.container}>
         <h1 className={classes.title}>
           wypożyczalnia sprzętu budowlanego łukasz kustra
         </h1>
-        <p className={classes.description}>
-          W naszej ofercie znajdą Państwo maszyny i elektronarzędzia najelpszych
-          firm na rynku.
-        </p>
-        <Button>Oferta</Button>
-        <Button>Kontakt</Button>
+        <div className={classes.description}>
+          <p>
+            W naszym asortymencie znajdą Państwo maszyny i elektronarzędzia
+            najlepszych firm na rynku. Oferujemy sprzęt potrzebny przy budowie,
+            remoncie, pielęgnacji ogrodu i codziennych czynościach domowych.
+          </p>
+          <div className={classes.buttonsContainer}>
+            <Button>Oferta</Button>
+            <Button>Kontakt</Button>
+          </div>
+        </div>
       </Card>
     </div>
   );

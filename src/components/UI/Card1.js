@@ -13,6 +13,22 @@ const Card = (props) => {
     detailsCard.classList.add("hidden");
   };
 
+  {
+    /* <div className="itemsContainer">
+        {/* {PRODUKTY.map((item) => {
+          return (
+            <Card
+              title={item.title}
+              id={item.id}
+              img={item.img}
+              priceForHour={item.priceForHour}
+              priceForDay={item.priceForDay}
+            />
+          );
+        })} }
+      </div> */
+  }
+
   return (
     <div className={classes.card}>
       <div id={props.id} className={`${classes.details} hidden`}>

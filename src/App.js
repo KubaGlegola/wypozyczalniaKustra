@@ -3,6 +3,9 @@ import Card from "./components/UI/Card1";
 import kosiarka from "./assets/kosiarka.png";
 import Hero from "./components/Layout/Hero";
 import Navbar from "./components/Layout/Navbar";
+import Producers from "./components/Layout/Producers";
+import Footer from "./components/Layout/Footer";
+import Offer from "./components/Layout/Offer";
 
 const PRODUKTY = [
   {
@@ -11,6 +14,7 @@ const PRODUKTY = [
     img: kosiarka,
     priceForHour: "50zł",
     priceForDay: "200zł",
+    category: "ogród",
   },
   {
     id: "m2",
@@ -18,6 +22,7 @@ const PRODUKTY = [
     img: kosiarka,
     priceForHour: "50zł",
     priceForDay: "200zł",
+    category: "ogród",
   },
   {
     id: "m3",
@@ -25,6 +30,7 @@ const PRODUKTY = [
     img: kosiarka,
     priceForHour: "50zł",
     priceForDay: "200zł",
+    category: "ogród",
   },
   {
     id: "m4",
@@ -32,6 +38,7 @@ const PRODUKTY = [
     img: kosiarka,
     priceForHour: "50zł",
     priceForDay: "200zł",
+    category: "ogród",
   },
   {
     id: "m5",
@@ -39,6 +46,7 @@ const PRODUKTY = [
     img: kosiarka,
     priceForHour: "50zł",
     priceForDay: "200zł",
+    category: "ogród",
   },
 ];
 
@@ -47,19 +55,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      <div className="itemsContainer">
-        {/* {PRODUKTY.map((item) => {
-          return (
-            <Card
-              title={item.title}
-              id={item.id}
-              img={item.img}
-              priceForHour={item.priceForHour}
-              priceForDay={item.priceForDay}
-            />
-          );
-        })} */}
-      </div>
+      <Producers />
+      <Offer products={PRODUKTY} />
+      <Footer />
     </div>
   );
 }

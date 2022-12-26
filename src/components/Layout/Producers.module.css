@@ -1,0 +1,14 @@
+.item {
+  padding: 0 1rem;
+}
+
+.title {
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+.carouselContainer {
+  text-align: center;
+  width: 50%;
+  transform: translateY(-5rem);
+}
