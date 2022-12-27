@@ -6,6 +6,7 @@ import Navbar from "./components/Layout/Navbar";
 import Producers from "./components/Layout/Producers";
 import Footer from "./components/Layout/Footer";
 import Offer from "./components/Layout/Offer";
+import Contact from "./components/Layout/Contact";
 
 const PRODUKTY = [
   {
@@ -57,6 +58,7 @@ function App() {
       <Hero />
       <Producers />
       <Offer products={PRODUKTY} />
+      <Contact />
       <Footer />
     </div>
   );

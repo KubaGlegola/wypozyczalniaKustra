@@ -4,25 +4,29 @@ import Card from "../UI/Card";
 import dom from "../../assets/dom.jpg";
 import ogrod from "../../assets/ogrod.jpg";
 import budowa from "../../assets/budowa.jpeg";
+import Button from "../UI/Button";
 
 const Offer = (props) => {
-  const [itemsShown, setItemsShown] = useState(true);
+  const [itemsShown, setItemsShown] = useState(false);
   return (
-    <section className={classes.offer}>
+    <Card className={classes.offer}>
       <h1 className={classes.title}>Oferta: </h1>
       {!itemsShown && (
         <div className={classes.cardsContainer}>
           <Card className={classes.card}>
             <p className={classes.title}>Dom</p>
             <img className={classes.img} src={dom} alt="dom" />
+            <Button className={classes.buttonn}>Pokaż</Button>
           </Card>
           <Card className={classes.card}>
             <p className={classes.title}>Ogród</p>
             <img className={classes.img} src={ogrod} alt="ogrod" />
+            <Button className={classes.buttonn}>Pokaż</Button>
           </Card>
           <Card className={classes.card}>
             <p className={classes.title}>Budowa</p>
             <img className={classes.img} src={budowa} alt="budowa" />
+            <Button className={classes.buttonn}>Pokaż</Button>
           </Card>
         </div>
       )}
@@ -38,7 +42,7 @@ const Offer = (props) => {
             </Card>
           );
         })}
-    </section>
+    </Card>
   );
 };
 
