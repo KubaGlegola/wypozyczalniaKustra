@@ -6,6 +6,8 @@ import {
   AiOutlineMail,
   AiOutlineFacebook,
 } from "react-icons/ai";
+import Input from "../UI/Input";
+import Button from "../UI/Button";
 
 const Contact = () => {
   return (
@@ -23,10 +25,34 @@ const Contact = () => {
           </Card>
           <Card className={classes.contactCard}>
             <AiOutlineFacebook className={classes.contactIcon} />
-            Facebook
+            <a href="https://www.facebook.com/people/Wypo%C5%BCyczalnia-sprz%C4%99tu-budowlanego-%C5%81ukasz-Kustra/100088261512715/">
+              Facebook
+            </a>
           </Card>
         </div>
         <p className={classes.title}>Lub pozwól nam się z Tobą skontaktować!</p>
+        <Card className={classes.formCard}>
+          <Input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            pattern="[1-9][0-9]{2}-[0-9]{3}-[0-9]{3}"
+            label="Wpisz numer telefonu"
+            maxlength="9"
+            placeholder="000-000-000"
+          />
+          <Input
+            type="email"
+            id="email"
+            name="email"
+            label="Wpisz adres e-mail"
+          />
+          <div className={classes.textarea}>
+            <label htmlFor="message">Wpisz treść wiadomości</label>
+            <textarea id="message" name="message" rows="10" />
+          </div>
+          <Button type="submit">Wyślij wiadomość</Button>
+        </Card>
       </Card>
     </Card>
   );
