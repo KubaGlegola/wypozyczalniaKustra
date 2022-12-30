@@ -6,7 +6,8 @@ import Navbar from "./components/Layout/Navbar";
 import Producers from "./components/Layout/Producers";
 import Footer from "./components/Layout/Footer";
 import Offer from "./components/Layout/Offer";
-import Contact from "./components/Layout/Contact";
+import Contact from "./components/Layout/Contact/Contact";
+import Terms from "./components/Layout/Terms";
 
 const PRODUKTY = [
   {
@@ -59,6 +60,7 @@ function App() {
       <Producers />
       <Offer products={PRODUKTY} />
       <Contact />
+      <Terms />
       <Footer />
     </div>
   );

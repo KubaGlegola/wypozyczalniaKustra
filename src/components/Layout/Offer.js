@@ -16,17 +16,17 @@ const Offer = (props) => {
           <Card className={classes.card}>
             <p className={classes.title}>Dom</p>
             <img className={classes.img} src={dom} alt="dom" />
-            <Button className={classes.buttonn}>Pokaż</Button>
+            <Button className={classes.buttonn}>Pokaż produkty</Button>
           </Card>
           <Card className={classes.card}>
             <p className={classes.title}>Ogród</p>
             <img className={classes.img} src={ogrod} alt="ogrod" />
-            <Button className={classes.buttonn}>Pokaż</Button>
+            <Button className={classes.buttonn}>Pokaż produkty</Button>
           </Card>
           <Card className={classes.card}>
             <p className={classes.title}>Budowa</p>
             <img className={classes.img} src={budowa} alt="budowa" />
-            <Button className={classes.buttonn}>Pokaż</Button>
+            <Button className={classes.buttonn}>Pokaż produkty</Button>
           </Card>
         </div>
       )}
