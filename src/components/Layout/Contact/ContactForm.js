@@ -12,7 +12,7 @@ const ContactForm = () => {
         name="phoneNumber"
         pattern="[1-9][0-9]{2}-[0-9]{3}-[0-9]{3}"
         label="Wpisz numer telefonu"
-        maxlength="9"
+        maxLength="9"
         placeholder="000-000-000"
       />
       <Input

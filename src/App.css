@@ -15,11 +15,24 @@
   animation: hideAnimation 2s ease-out;
 }
 
+.hideMenu {
+  animation: showMenu 1s ease-in-out;
+}
+
 @keyframes hideAnimation {
   from {
     height: 75%;
   }
   to {
     height: 0%;
+  }
+}
+
+@keyframes showMenu {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 100%;
   }
 }

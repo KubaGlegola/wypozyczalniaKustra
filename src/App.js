@@ -17,6 +17,7 @@ const PRODUKTY = [
     priceForHour: "50zł",
     priceForDay: "200zł",
     category: "ogród",
+    isPromoted: true,
   },
   {
     id: "m2",
@@ -24,7 +25,8 @@ const PRODUKTY = [
     img: kosiarka,
     priceForHour: "50zł",
     priceForDay: "200zł",
-    category: "ogród",
+    category: "dom",
+    isPromoted: false,
   },
   {
     id: "m3",
@@ -33,6 +35,7 @@ const PRODUKTY = [
     priceForHour: "50zł",
     priceForDay: "200zł",
     category: "ogród",
+    isPromoted: true,
   },
   {
     id: "m4",
@@ -41,6 +44,7 @@ const PRODUKTY = [
     priceForHour: "50zł",
     priceForDay: "200zł",
     category: "ogród",
+    isPromoted: true,
   },
   {
     id: "m5",
@@ -48,7 +52,8 @@ const PRODUKTY = [
     img: kosiarka,
     priceForHour: "50zł",
     priceForDay: "200zł",
-    category: "ogród",
+    category: "budowa",
+    isPromoted: false,
   },
 ];
 

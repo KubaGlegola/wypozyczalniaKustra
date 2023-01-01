@@ -28,6 +28,7 @@ const Terms = () => {
           <li>dwa dokumenty tożsamości ze zdjęciem</li>
         </ul>
       </p>
+      <AiOutlineFilePdf />
     </Card>
   );
 };

@@ -1,42 +1,20 @@
 .offer {
   margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  padding-bottom: 5rem;
+  width: 90%;
+  height: 30vh;
+  margin-bottom: 2rem;
+  transform: translateY(-2rem);
 }
 
 .title {
+  text-align: center;
   font-size: 2rem;
   font-weight: 500;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  cursor: pointer;
-  background-color: #c6cebe;
-}
-
-.cardsContainer {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.img {
-  margin: 0 auto;
-  width: 80%;
-  border-radius: 20px;
-}
-
-.productCard {
-  display: flex;
-  margin: 1rem 0;
-}
-.productImg {
-  width: 10%;
-}
-
-.buttonn {
-  margin: 2rem 10% 0 auto;
+@media only screen and (min-width: 1200px) {
+  .offer {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
 }
