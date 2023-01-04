@@ -16,11 +16,14 @@
   top: 2rem;
   list-style: none;
   display: flex;
+  visibility: hidden;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.5);
   gap: 1rem;
   width: 100%;
   backdrop-filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.5s linear;
 }
 
 .menuItem {
@@ -51,4 +54,10 @@
   100% {
     transform: scale(1);
   }
+}
+
+.showMenu {
+  visibility: visible !important;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
