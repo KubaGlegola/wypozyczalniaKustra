@@ -2,8 +2,14 @@
   cursor: pointer;
   border: none;
   outline: none;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
   background-color: #1e1515;
   color: #fcf1d8;
   border-radius: 10px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .button {
+    padding: 1rem 4rem;
+  }
 }
