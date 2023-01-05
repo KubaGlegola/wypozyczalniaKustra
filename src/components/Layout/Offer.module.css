@@ -24,6 +24,18 @@
   position: relative;
 }
 
+.imageButton {
+  background: rgba(255, 255, 255, 0.7);
+  color: #080808;
+  font-weight: bolder;
+}
+
+.imageContainer:has(.imageButton:hover) {
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
 .imageContainer > img {
   top: 0;
   bottom: 0;
@@ -35,7 +47,7 @@
   position: absolute;
 }
 
-.imageContainer > .imageButton {
+.imageContainer > .imageButtonContainer {
   position: absolute;
   left: 0;
   right: 0;

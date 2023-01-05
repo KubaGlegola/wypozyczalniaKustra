@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
-import classes from "./Navbar.module.css";
+import React, { useState, useEffect, useRef, Fragment } from "react";
 import { AiFillHome, AiFillMail } from "react-icons/ai";
 import { MdLocalOffer } from "react-icons/md";
 import { GoAlert } from "react-icons/go";
 import { Spin as Hamburger } from "hamburger-react";
+import classes from "./MobileMenu.module.css";
 
-const Navbar = () => {
+const Menu = () => {
   let menuHandler = document.querySelector("ul");
   let menuRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
@@ -17,10 +17,8 @@ const Navbar = () => {
       menuRef.current.classList.remove(classes.showMenu);
     }
   }, [isOpen]);
-
   return (
-    <nav className={classes.navbar}>
-      <div className={classes.logo}>logo</div>
+    <Fragment>
       <Hamburger toggled={isOpen} toggle={setIsOpen} />
       <ul ref={menuRef} className={`${classes.menu}`}>
         <li>
@@ -48,8 +46,8 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
-    </nav>
+    </Fragment>
   );
 };
 
-export default Navbar;
+export default Menu;

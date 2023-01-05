@@ -8,6 +8,17 @@
   font-weight: 500;
 }
 
+.icon {
+  font-size: 2rem;
+  color: #e20000;
+}
+
+.pdfContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 @media only screen and (min-width: 1200px) {
   .termsCard {
     width: 80%;

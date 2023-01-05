@@ -1,8 +1,9 @@
 import "./App.css";
+import React, { useState, useEffect } from "react";
 import Card from "./components/UI/Card1";
 import kosiarka from "./assets/kosiarka.png";
 import Hero from "./components/Layout/Hero";
-import Navbar from "./components/Layout/Navbar";
+import Navbar from "./components/Layout/Navbar/Navbar";
 import Producers from "./components/Layout/Producers";
 import Footer from "./components/Layout/Footer";
 import Offer from "./components/Layout/Offer";
@@ -58,9 +59,31 @@ const PRODUKTY = [
 ];
 
 function App() {
+  const [scrollUp, setScrollUp] = useState(true);
+  const [currentScroll, setCurrentScroll] = useState(0);
+  const [lastScroll, setLastScroll] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setCurrentScroll(window.scrollY);
+      if (currentScroll > window.innerHeight / 4) {
+        currentScroll > lastScroll ? setScrollUp(false) : setScrollUp(true);
+      }
+
+      console.log(window.innerHeight);
+    };
+
+    setLastScroll(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [currentScroll]);
+
   return (
     <div className="App">
-      <Navbar />
+      {scrollUp && <Navbar />}
       <Hero />
       <Producers />
       <Offer products={PRODUKTY} />

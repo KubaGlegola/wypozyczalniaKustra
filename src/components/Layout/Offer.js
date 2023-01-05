@@ -16,26 +16,26 @@ const Offer = (props) => {
       <div className={classes.imagesContainer}>
         <div className={classes.imageContainer}>
           <img src={dom} alt="dom" />
-          <div className={classes.imageButton}>
-            <Button>Dom</Button>
+          <div className={classes.imageButtonContainer}>
+            <Button className={classes.imageButton}>Dom</Button>
           </div>
         </div>
         <div className={classes.imageContainer}>
           <img src={budowa} alt="budowa" />
-          <div className={classes.imageButton}>
-            <Button>Budowa</Button>
+          <div className={classes.imageButtonContainer}>
+            <Button className={classes.imageButton}>Budowa</Button>
           </div>
         </div>
         <div className={classes.imageContainer}>
           <img src={ogrod} alt="ogrod" />
-          <div className={classes.imageButton}>
-            <Button>Ogrod</Button>
+          <div className={classes.imageButtonContainer}>
+            <Button className={classes.imageButton}>Ogrod</Button>
           </div>
         </div>
         <div className={classes.imageContainer}>
           <img src={elektronarzedzia} alt="elektronarzedzia" />
-          <div className={classes.imageButton}>
-            <Button>Elektronarzędzia</Button>
+          <div className={classes.imageButtonContainer}>
+            <Button className={classes.imageButton}>Elektronarzędzia</Button>
           </div>
         </div>
       </div>
