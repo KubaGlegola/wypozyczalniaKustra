@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <Card className={classes.contact}>
       <Card className={classes.contactContainer}>
-        <p className={classes.title}>Skontakuj się z nami!</p>
+        <h1 className={classes.title}>Skontakuj się z nami!</h1>
         <div className={classes.cardsContainer}>
           <Card className={classes.contactCard}>
             <AiOutlinePhone className={classes.contactIcon} />
@@ -30,7 +30,9 @@ const Contact = () => {
             </a>
           </Card>
         </div>
-        <p className={classes.title}>Lub pozwól nam skontaktować się z Tobą!</p>
+        <h2 className={classes.title}>
+          Lub pozwól nam skontaktować się z Tobą!
+        </h2>
         <Card className={classes.formCard}>
           <ContactForm />
         </Card>

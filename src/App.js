@@ -1,14 +1,14 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import Card from "./components/UI/Card1";
 import kosiarka from "./assets/kosiarka.png";
 import Hero from "./components/Layout/Hero";
 import Navbar from "./components/Layout/Navbar/Navbar";
 import Producers from "./components/Layout/Producers";
 import Footer from "./components/Layout/Footer";
-import Offer from "./components/Layout/Offer";
+import Offer from "./components/Layout/Offer/Offer";
 import Contact from "./components/Layout/Contact/Contact";
 import Terms from "./components/Layout/Terms";
+import OfferGrid from "./components/Layout/Offer/OfferGrid";
 
 const PRODUKTY = [
   {
@@ -69,8 +69,6 @@ function App() {
       if (currentScroll > window.innerHeight / 4) {
         currentScroll > lastScroll ? setScrollUp(false) : setScrollUp(true);
       }
-
-      console.log(window.innerHeight);
     };
 
     setLastScroll(window.scrollY);
@@ -79,17 +77,18 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [currentScroll]);
+  }, [currentScroll, lastScroll]);
 
   return (
     <div className="App">
       {scrollUp && <Navbar />}
-      <Hero />
+      {/* <Hero />
       <Producers />
       <Offer products={PRODUKTY} />
       <Contact />
       <Terms />
-      <Footer />
+      <Footer /> */}
+      <OfferGrid />
     </div>
   );
 }

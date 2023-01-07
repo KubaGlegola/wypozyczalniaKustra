@@ -1,0 +1,13 @@
+.container {
+  width: 90%;
+  height: 200vh;
+  transform: translateY(3rem);
+}
+
+.filterIcon {
+  position: fixed;
+  right: 15%;
+  bottom: 5%;
+  font-size: 2rem;
+  z-index: 1;
+}

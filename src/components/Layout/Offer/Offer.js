@@ -1,11 +1,11 @@
 import React from "react";
-import Card from "../UI/Card";
+import Card from "../../UI/Card";
 import classes from "./Offer.module.css";
-import dom from "../../assets/dom.jpg";
-import budowa from "../../assets/budowa.jpeg";
-import elektronarzedzia from "../../assets/elektronarzedzia.jpg";
-import ogrod from "../../assets/ogrod.jpg";
-import Button from "../UI/Button";
+import dom from "../../../assets/dom.jpg";
+import budowa from "../../../assets/budowa.jpeg";
+import elektronarzedzia from "../../../assets/elektronarzedzia.jpg";
+import ogrod from "../../../assets/ogrod.jpg";
+import Button from "../../UI/Button";
 
 const Offer = (props) => {
   return (

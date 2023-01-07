@@ -1,0 +1,42 @@
+.flipCard {
+  width: 80%;
+  height: 40vh;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 80%;
+}
+
+.imageContainer > img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.flipCard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCard-inner {
+  transform: rotateY(180deg);
+}
+
+.flipCard-front,
+.flipCard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flipCard-back {
+  transform: rotateY(180deg);
+}
