@@ -4,15 +4,14 @@ import { MdLocalOffer } from "react-icons/md";
 import { GoAlert } from "react-icons/go";
 import { Spin as Hamburger } from "hamburger-react";
 import classes from "./MobileMenu.module.css";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
-  let menuHandler = document.querySelector("ul");
   let menuRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     if (isOpen) {
       menuRef.current.classList.add(classes.showMenu);
-      console.log(classes.showMenu);
     } else {
       menuRef.current.classList.remove(classes.showMenu);
     }
@@ -20,30 +19,48 @@ const Menu = () => {
   return (
     <Fragment>
       <Hamburger toggled={isOpen} toggle={setIsOpen} />
+
+      {/* <Menu ref={menuRef} className={`${classes.menu}`} /> */}
       <ul ref={menuRef} className={`${classes.menu}`}>
         <li>
-          <a href="#" className={classes.menuItem}>
+          <Link
+            to="/"
+            className={classes.menuItem}
+            onClick={() => setIsOpen(false)}
+          >
             <AiFillHome className={classes.icon} />
             Strona główna
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className={classes.menuItem}>
+          <Link
+            to="/oferta"
+            className={classes.menuItem}
+            onClick={() => setIsOpen(false)}
+          >
             <MdLocalOffer className={classes.icon} />
             Oferta
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className={classes.menuItem}>
+          <Link
+            to="/kontakt"
+            className={classes.menuItem}
+            onClick={() => setIsOpen(false)}
+          >
             <AiFillMail className={classes.icon} />
             Kontakt
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className={classes.menuItem}>
+          <Link
+            to="/regulamin"
+            className={classes.menuItem}
+            onClick={() => setIsOpen(false)}
+          >
             <GoAlert className={classes.icon} />
             Regulamin
-          </a>
+          </Link>
         </li>
       </ul>
     </Fragment>

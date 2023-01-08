@@ -1,0 +1,73 @@
+.container {
+  width: 40%;
+}
+
+.contact {
+  width: 100%;
+  background-color: rgb(199, 207, 191);
+  transform: translateY(-2rem);
+  padding: 1rem 0;
+}
+
+.contactContainer {
+  width: 90%;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contactCard {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contactCard:hover > .contactIcon {
+  animation: bump ease-in 1s;
+}
+
+.contactIcon {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+
+.formCard {
+  width: 90%;
+}
+
+@media only screen and (min-width: 1200px) {
+  .contactContainer {
+    width: 80%;
+  }
+
+  .cardsContainer {
+    flex-direction: row;
+  }
+
+  .formCard {
+    width: 50%;
+  }
+
+  .contactCard {
+    width: 20%;
+  }
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

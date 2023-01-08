@@ -1,0 +1,12 @@
+.container {
+  width: 40%;
+}
+
+.itemsContainer {
+  width: 90%;
+  background-color: transparent;
+  transform: translateY(3rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
