@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Producers from "../components/Layout/Producers";
 import Button from "../components/UI/Button";
 import Card from "../components/UI/Card";
+import WhyUs from "../components/WhyUs";
 import classes from "./Home.module.css";
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
         </Card>
       </div>
       <Producers />
+      <WhyUs />
     </Fragment>
   );
 };
