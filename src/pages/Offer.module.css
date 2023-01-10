@@ -5,12 +5,20 @@
 .itemsContainer {
   width: 90%;
   background-color: transparent;
+  display: flex;
+  grid-template-columns: 85% 15%;
 }
 
 .actionBar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.radioContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .icon {
@@ -19,7 +27,7 @@
 }
 
 .itemsGrid {
-  transform: translateY(3rem);
+  flex-basis: 85%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
