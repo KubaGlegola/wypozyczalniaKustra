@@ -3,16 +3,20 @@
 }
 
 .itemsContainer {
-  width: 90%;
+  width: 100%;
   background-color: transparent;
-  display: flex;
-  grid-template-columns: 85% 15%;
 }
 
 .actionBar {
   display: flex;
   flex-direction: column;
   height: fit-content;
+  position: sticky;
+  max-height: 90vh;
+  overflow: scroll;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
 }
 
 .radioContainer {
@@ -24,6 +28,9 @@
 .icon {
   font-size: 2rem;
   cursor: pointer;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 .itemsGrid {
@@ -31,4 +38,21 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .icon {
+    display: none;
+  }
+
+  .itemsContainer {
+    display: flex;
+    width: 90%;
+    grid-template-columns: 85% 15%;
+  }
+
+  .actionBar {
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow: unset;
+  }
 }

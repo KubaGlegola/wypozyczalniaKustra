@@ -19,7 +19,7 @@ const WhyUs = () => {
       </div>
       <div className={classes.item}>
         <GiLaurelCrown className={classes.badge} />
-        <h2>najlepsi producenci</h2>
+        <h2>profesjonalny sprzęt</h2>
         <p></p>
       </div>
     </Card>

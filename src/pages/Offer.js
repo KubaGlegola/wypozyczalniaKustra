@@ -20,33 +20,75 @@ const producers = [
   "karcher",
   "lumag",
   "makita",
-  "master-cut",
+  "master cut",
   "mtd",
   "trotec",
   "weibang",
+  "mar-pol",
 ];
 
-const Offer = () => {
+const Offer = (props) => {
   const [filteredItems, setFilteredItems] = useState(items);
   const [inputValue, setInputValue] = useState("");
   const [category, setCategory] = useState("");
+  const [producer, setProducer] = useState("");
+  const [isBarShown, setIsBarShown] = useState(false);
   const inputRef = useRef("");
+
+  useEffect(() => {
+    if (!props.isMobile) {
+      setIsBarShown(true);
+    }
+  }, [props.isMobile]);
 
   const getInputValue = () => {
     setInputValue(inputRef.current.value);
   };
 
-  const getCategoryValue = () => {};
+  const changeCategoryHandler = (selectedCategory) => {
+    setCategory(selectedCategory);
+    if (producer !== "") {
+      setProducer("");
+      producer.checked = false;
+    }
+  };
 
-  // useEffect(() => {
-  //   if (checkedCategory !== "") {
-  //     setFilteredItems(
-  //       items.filter((item) => item.category.includes(checkedCategory.value))
-  //     );
-  //   } else {
-  //     setFilteredItems(items);
-  //   }
-  // }, [checkedCategory]);
+  const changeProducerHandler = (selectedProducer) => {
+    setProducer(selectedProducer);
+    if (category !== "") {
+      setCategory("");
+      category.checked = false;
+    }
+  };
+
+  const toggleFilterBar = () => {
+    setIsBarShown((prev) => !prev);
+  };
+
+  useEffect(() => {
+    if (category !== "") {
+      setFilteredItems(
+        items.filter((item) => item.category.includes(category.value))
+      );
+    } else {
+      setFilteredItems(items);
+    }
+  }, [category]);
+
+  useEffect(() => {
+    console.log(producer);
+    if (producer !== "") {
+      setFilteredItems(
+        items.filter(
+          (item) =>
+            "".concat(item.producer).toLowerCase() ===
+            producer.value.toLowerCase()
+        )
+      );
+    } else {
+      setFilteredItems(items);
+    }
+  }, [producer]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -90,23 +132,40 @@ const Offer = () => {
             <FlipCard key={item.id} product={item} />
           ))}
         </div>
-        <Card className={classes.actionBar}>
-          <p>
-            <strong>Filtruj</strong>
-          </p>
-          <Input
-            ref={inputRef}
-            onChange={getInputValue}
-            id="search"
-            name="search"
-            type="text"
-          />
-          <FilterGroup items={categories} name="kategorie" />
-          <FilterGroup items={producers} name="Producenci" />
-
-          {/* <FiFilter className={classes.icon} /> */}
-        </Card>
+        <CSSTransition
+          in={isBarShown}
+          timeout={500}
+          classNames="filter"
+          unmountOnExit={true}
+        >
+          <Card className={classes.actionBar}>
+            <p>
+              <strong>Filtruj</strong>
+            </p>
+            <Input
+              ref={inputRef}
+              onChange={getInputValue}
+              id="search"
+              name="search"
+              type="text"
+            />
+            <FilterGroup
+              changeValue={changeCategoryHandler}
+              items={categories}
+              name="kategorie"
+              state={category}
+            />
+            <FilterGroup
+              items={producers}
+              name="Producenci"
+              changeValue={changeProducerHandler}
+              state={producer}
+            />
+          </Card>
+        </CSSTransition>
       </Card>
+
+      <FiFilter className={classes.icon} onClick={toggleFilterBar} />
     </div>
   );
 };

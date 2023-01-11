@@ -8,3 +8,25 @@
   transform: translateX(0);
   transition: all 1s linear;
 }
+
+.filter-enter {
+  opacity: 0;
+  transform: translateY(100vh);
+}
+
+.filter-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 500ms linear;
+}
+
+.filter-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.filter-exit-active {
+  opacity: 0;
+  transform: translateY(100vh);
+  transition: all 500ms linear;
+}

@@ -4,15 +4,15 @@ import { RxCross2 } from "react-icons/rx";
 import Radio from "../UI/Radio";
 
 const FilterGroup = (props) => {
-  const [checkedRadio, setCheckedRadio] = useState("");
-
   const clearChecked = () => {
-    checkedRadio.checked = false;
-    setCheckedRadio("");
+    if (props.state !== "") {
+      props.state.checked = false;
+      props.changeValue("");
+    }
   };
 
   const onChangeHandler = (e) => {
-    setCheckedRadio(e.target);
+    props.changeValue(e.target);
   };
 
   return (

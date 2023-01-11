@@ -7,7 +7,7 @@ const Hero = (props) => {
   return (
     <div
       className={classes.hero}
-      style={{ background: `url(${props.imgSrc})` }}
+      style={{ background: `url(${props.imgSrc})`, backgroundSize: "cover" }}
     >
       {props.children}
     </div>
